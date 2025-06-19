@@ -17,7 +17,7 @@ Route::get('/produk', [App\Http\Controllers\HomeController::class, 'produk'])->n
 // Admin Routes
 Route::middleware(['isAdmin'])->group(function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.dashboard');
-    Route::get('/admin/users', [UserController::class, 'index'])->name('admin.users');
+    Route::resource('admin/users', UserController::class);
     // tambahkan route admin lainnya di sini
 });
 
