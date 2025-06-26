@@ -30,7 +30,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
-                    @auth
+                        <!-- Menu berdasarkan Role -->
+                        @auth
                         @if(Auth::user()->role->name === 'admin')
                             <!-- Menu Admin -->
                             <li class="nav-item">
@@ -47,9 +48,10 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('products.index') }}">Produk</a>
                             </li>
-                        @endif
-                    @endauth
-                </ul>
+                            @endif
+                        @endauth
+                    </ul>
+                        
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
