@@ -65,7 +65,7 @@ class RegisterController extends Controller
     {
         // Ambil role 'user' dari database
         $userRole = \App\Models\Role::where('name', 'user')->first();
-        
+ 
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],

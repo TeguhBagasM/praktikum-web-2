@@ -5,8 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">
+                <div class="card-header d-flex justify-content-between">
                     <h4>Manajemen Users</h4>
+                    <a href="{{ route('users.create') }}" class="btn btn-primary">Tambah User</a>
                 </div>
 
                 <div class="card-body">
