@@ -35,5 +35,8 @@ class UserController extends Controller
     public function contoh() {
         return "hello";
     }
+    public function coba(User $user) {
+        return view('users.edit', compact('user'));
+    }
 
 }
