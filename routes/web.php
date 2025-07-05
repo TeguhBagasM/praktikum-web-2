@@ -25,3 +25,12 @@ Route::middleware(['isAdmin'])->group(function () {
 Route::middleware(['auth'])->group(function () {
     // tambahkan route user lainnya di sini
 });
+
+
+
+
+Route::get('/latihan', function () {
+    return view('latihan');
+});
+
+Route::get('/latihan2', [App\Http\Controllers\LatihanController::class, 'index']);
